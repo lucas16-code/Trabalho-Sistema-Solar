@@ -1,0 +1,242 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 23px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    background: black;
+    border-bottom: 1px solid rgba(0, 102, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.3);
+    z-index: 1000;
+}
+
+.nav-logo a {
+    color: #fff;
+    font-family: "Megrim", sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.nav-logo a:hover {
+    color: #006eff;
+    text-shadow: 0 0 10px #00fff2;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: "Mukta", sans-serif;
+    color: #dcdcdc;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #008cff;
+    text-shadow: 0 0 10px #008cff;
+}
+
+body {
+    padding-top: 80px;
+}
+
+/* FUNDOS */
+.fundo,
+.fundo2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.fundo video,
+.fundo2 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fundo video.zoom {
+    transform: scale(3);
+    transition: transform 3s ease;
+}
+
+/* SEÇÕES */
+.sec1,
+.sec2 {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Títulos */
+.titulo {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    width: 90%;
+    text-shadow: 2px 2px 10px blue;
+}
+.titulo h1 {
+    font-size: 6vw;
+    font-family: "Megrim", sans-serif;
+}
+.titulo h2 {
+    font-size: 1.7vw;
+    font-family: "Megrim", sans-serif;
+    font-weight: 300;
+}
+
+/* Botão */
+.botao-entrar {
+    font-size: 15px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: rgba(0, 0, 0, 0.5);
+    border: 4px solid #1900ff;
+    color: white;
+
+    padding: 30px 50px;
+    border-radius: 100px;
+    font-family: "Orbitron", sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.botao-entrar:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: black;
+}
+
+.desaparecer {
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+/* DIVISOR */
+.divisor {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+.divisor:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #0400ff, #032172, #4c00ff);
+    box-shadow: 0 0 10px rgba(17, 0, 255, 0.7);
+}
+.bola {
+    position: absolute;
+    border-radius: 50%;
+}
+.bola1 {
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #f8b85f, #ff6f00);
+    top: 28px;
+    left: 10%;
+}
+.bola2 {
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle, #0095ff, #005f99);
+    top: 32px;
+    left: 45%;
+}
+.bola3 {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, #c7aefc, #7700ff);
+    top: 25px;
+    left: 80%;
+}
+
+/* CONTEÚDO DA SEÇÃO 2 */
+.conteiner {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    padding: 50px;
+    width: 90%;
+    max-width: 750px;
+    text-align: left;
+    box-shadow: 0 0 15px rgba(4, 0, 255, 0.5);
+}
+
+.conteiner h2 {
+    font-family: "Megrim", sans-serif;
+    color: white;
+}
+
+.conteiner p {
+    font-family: "Mukta", sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+.sublinha {
+    margin-top: 10px;
+    color: rgba(220, 220, 220, 0.6);
+}
+
+/* RODAPÉ */
+footer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-cima,
+.footer-baixo {
+    background-color: black;
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+.footer-texto {
+    position: absolute;
+    bottom: 60%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}

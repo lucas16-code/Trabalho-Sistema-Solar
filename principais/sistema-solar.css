@@ -1,0 +1,169 @@
+html {
+  scroll-behavior: smooth;/* Deixa a rolagem suave ao clicar em links internos */
+}
+ /* remove as margens, espaçamentos */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 23px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    background: black;
+    border-bottom: 1px solid rgba(0, 102, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.3);
+    z-index: 1000;
+}
+
+.nav-logo a {
+    color: #fff;
+    font-family: "Megrim", sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+.nav-logo a:hover {
+    color: #006eff;
+    text-shadow: 0 0 10px #00fff2;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: "Mukta", sans-serif;
+    color: #dcdcdc;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #008cff;
+    text-shadow: 0 0 10px #008cff;
+}
+
+body {
+    padding-top: 80px;
+}
+
+
+/* FUNDO */
+.fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.fundo video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ÁREA DO SISTEMA SOLAR */
+.sistema-solar {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  margin-top: 50px;
+}
+
+/* sol CENTRO */
+.sol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sol img {
+  width: min(22vw, 180px);
+  animation: brilho 12s ease-in-out infinite;
+}
+/* Efeito de brilho pulsante no sol */
+@keyframes brilho {
+  0%   { filter: drop-shadow(0 0 6px #ffcc00); }
+  50%  { filter: drop-shadow(0 0 22px #ffae00); }
+  100% { filter: drop-shadow(0 0 6px #ffcc00); }
+}
+
+/* ÓRBITAS DOS PLANETAS */
+.orbita {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  border: 1.5px solid rgba(255, 255, 255, 0.205);
+  border-radius: 50%;
+  pointer-events: none; 
+}
+/* Permite que apenas o planeta receba cliques */
+.orbita a,
+.orbita a img {
+  pointer-events: auto;
+}
+
+/* Tamanhos das órbitas e velocidades de rotação */
+.orbita1 { width: min(22vw + 80px, 180px); height: min(22vw + 80px, 180px); animation: girar1 4s linear infinite; }
+.orbita2 { width: min(28vw + 80px, 260px); height: min(28vw + 80px, 260px); animation: girar2 7s linear infinite; }
+.orbita3 { width: min(34vw + 80px, 340px); height: min(34vw + 80px, 340px); animation: girar3 10s linear infinite; }
+.orbita4 { width: min(40vw + 80px, 420px); height: min(40vw + 80px, 420px); animation: girar4 14s linear infinite; }
+.orbita5 { width: min(48vw + 80px, 520px); height: min(48vw + 80px, 520px); animation: girar5 18s linear infinite; }
+.orbita6 { width: min(56vw + 80px, 620px); height: min(56vw + 80px, 620px); animation: girar6 24s linear infinite; }
+.orbita7 { width: min(64vw + 80px, 720px); height: min(64vw + 80px, 720px); animation: girar7 30s linear infinite; }
+.orbita8 { width: min(72vw + 80px, 820px); height: min(72vw + 80px, 820px); animation: girar8 36s linear infinite; }
+
+/* Animações que giram cada órbita */
+@keyframes girar1 { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes girar2 { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes girar3 { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes girar4 { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes girar5 { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes girar6 { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes girar7 { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes girar8 { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* PLANETAS DENTRO DAS ÓRBITAS */
+.orbita a img {
+  position: absolute;
+  top: -20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+/* Tamanho e rotação individual de cada planeta */
+.orbita1 a img { width: min(6vw, 35px); animation: rot1 8s linear infinite; }
+.orbita2 a img { width: min(7vw, 45px); animation: rot2 12s linear infinite; }
+.orbita3 a img { width: min(8vw, 50px); animation: rot3 14s linear infinite; }
+.orbita4 a img { width: min(7vw, 45px); animation: rot4 18s linear infinite; }
+.orbita5 a img { width: min(12vw, 120px); animation: rot5 20s linear infinite; }
+.orbita6 a img { width: min(11vw, 110px); animation: rot6 22s linear infinite; }
+.orbita7 a img { width: min(9vw, 80px); animation: rot7 26s linear infinite; }
+.orbita8 a img { width: min(8vw, 75px); animation: rot8 30s linear infinite; }
+
+/* Rotação própria dos planetas */
+@keyframes rot1 { to { transform: translateX(-50%) rotate(360deg); } }
+@keyframes rot2 { to { transform: translateX(-50%) rotate(360deg); } }
+@keyframes rot3 { to { transform: translateX(-50%) rotate(360deg); } }
+@keyframes rot4 { to { transform: translateX(-50%) rotate(360deg); } }
+@keyframes rot5 { to { transform: translateX(-50%) rotate(360deg); } }
+@keyframes rot6 { to { transform: translateX(-50%) rotate(360deg); } }
+@keyframes rot7 { to { transform: translateX(-50%) rotate(360deg); } }
+@keyframes rot8 { to { transform: translateX(-50%) rotate(360deg); } }

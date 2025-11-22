@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-image: url(../imgs/fundo-netuno.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.514);
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 650px;
+    box-shadow: 0 0 15px rgba(0, 17, 255, 0.849);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #4da6ff;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #99c2ff;
+}
+
+p {
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: left;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #4da6ff;
+    width: 40%;
+}
+
+
+a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background: #4da6ff;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
