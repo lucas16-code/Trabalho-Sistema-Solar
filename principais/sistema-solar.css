@@ -17,6 +17,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background: black;
     border-bottom: 1px solid rgba(0, 102, 255, 0.5);
@@ -63,7 +64,7 @@ body {
 
 /* FUNDO */
 .fundo {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -158,7 +159,6 @@ body {
 .orbita7 a img { width: min(9vw, 80px); animation: rot7 26s linear infinite; }
 .orbita8 a img { width: min(8vw, 75px); animation: rot8 30s linear infinite; }
 
-/* Rotação própria dos planetas */
 @keyframes rot1 { to { transform: translateX(-50%) rotate(360deg); } }
 @keyframes rot2 { to { transform: translateX(-50%) rotate(360deg); } }
 @keyframes rot3 { to { transform: translateX(-50%) rotate(360deg); } }
@@ -167,3 +167,70 @@ body {
 @keyframes rot6 { to { transform: translateX(-50%) rotate(360deg); } }
 @keyframes rot7 { to { transform: translateX(-50%) rotate(360deg); } }
 @keyframes rot8 { to { transform: translateX(-50%) rotate(360deg); } }
+
+
+@media (max-width:1024px) {
+
+    header h1 {
+        font-size: 4vw;
+    }
+
+    .planetas img {
+        width: 120px;
+    }
+}
+
+@media (max-width:768px) {
+
+    header {
+        padding-top: 20px;
+    }
+
+    header h1 {
+        font-size: 5.8vw;
+        text-align: center;
+    }
+
+    .container-planetas {
+        width: 90%;
+        margin: auto;
+    }
+
+    .planetas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .planetas img {
+        width: 95px;
+    }
+}
+
+@media (max-width:480px) {
+
+    header h1 {
+        font-size: 7vw;
+    }
+
+    .planetas {
+        gap: 12px;
+    }
+
+    .planetas img {
+        width: 80px;
+    }
+}
+
+
+@media (max-width:390px) {
+
+    header h1 {
+        font-size: 8vw;
+    }
+
+    .planetas img {
+        width: 70px;
+    }
+}
