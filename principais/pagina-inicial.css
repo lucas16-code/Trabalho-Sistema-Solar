@@ -59,6 +59,11 @@ html {
 
 body {
     padding-top: 80px;
+    background: black;
+}
+
+main {
+    background: transparent;
 }
 
 /* FUNDOS */
@@ -151,20 +156,29 @@ body {
     width: 100%;
     height: 100px;
     position: relative;
+    overflow: hidden;
+    background: transparent;
 }
-.divisor:before {
+
+/* Linha central */
+.divisor::before {
     content: "";
     position: absolute;
     top: 50%;
+    left: 0;
     width: 100%;
     height: 3px;
     background: linear-gradient(to right, #0400ff, #032172, #4c00ff);
     box-shadow: 0 0 10px rgba(17, 0, 255, 0.7);
 }
+
+/* Bolinhas */
 .bola {
     position: absolute;
     border-radius: 50%;
 }
+
+/* Solzinho */
 .bola1 {
     width: 25px;
     height: 25px;
@@ -172,6 +186,8 @@ body {
     top: 28px;
     left: 10%;
 }
+
+/* Planeta azul */
 .bola2 {
     width: 18px;
     height: 18px;
@@ -179,6 +195,8 @@ body {
     top: 32px;
     left: 45%;
 }
+
+/* Planeta roxo */
 .bola3 {
     width: 30px;
     height: 30px;
